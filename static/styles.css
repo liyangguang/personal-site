@@ -1,0 +1,52 @@
+/* ---------------- normalize ---------------- */
+*, *:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-size: 16px;
+  font-size: calc(12px + .3vw);
+}
+@media screen and (max-width: 1000px){
+  html, body{
+    font-size: 16px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  opacity: .8;
+  transition: .2s opacity ease;
+  cursor: pointer;
+}
+a:hover{
+  opacity: 1;
+}
+
+/* ---------------- site ---------------- */
+body{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  background: #333538;
+  color: #d4e5ec;
+  padding-top: 5em;
+}
+h1{
+  margin: 1.5em;
+}
+p{
+  margin: 1.5em;
+}
+a{
+  display: inline-block;
+  margin: 0 1em;
+}
+em{
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  /*font-size: 2em;*/
+  vertical-align: middle;
+}
