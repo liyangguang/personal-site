@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "dev": "sudo node server.js",
-    "prod": "sudo node server.js"
+    "prod": "sudo forever start server.js",
+    "stop": "sudo forever stop server.js"
   },
   "author": "Yangguang Li (liyangguangcn@gmail.com)",
   "license": "ISC"
