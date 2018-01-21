@@ -18,5 +18,5 @@ npm run stop
 
 ## Renew https certificate
 ```
-renew-cert
+npm run renew-cert
 ```
