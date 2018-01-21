@@ -15,3 +15,8 @@ npm run prod
 ```
 npm run stop
 ```
+
+## Renew https certificate
+```
+renew-cert
+```
