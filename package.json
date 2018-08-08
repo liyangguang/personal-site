@@ -11,7 +11,7 @@
     "dev": "sudo node server.js",
     "prod": "sudo forever start server.js",
     "stop": "sudo forever stop server.js",
-    "renew-cert": "sudo forever stop server.js && sudo certbot renew --dry-run && sudo forever start server.js"
+    "renew-cert": "sudo forever stop server.js && sudo certbot renew && sudo forever start server.js"
   },
   "author": "Yangguang Li (liyangguangcn@gmail.com)",
   "license": "ISC"
