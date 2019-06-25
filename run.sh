@@ -1,1 +1,1 @@
-npm run prod --prefix ~/liyangguang.com
+npm run prod --prefix /home/liyangguang/liyangguang.com
