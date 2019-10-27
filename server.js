@@ -1,34 +1,36 @@
 /* simple https + http express */
-
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
 const express = require('express');
+const IS_DEV = process.env.ENV === 'dev';
 
 httpServer = () => {
   const httpApp = express();
-  // redirect to https app
-  httpApp.get('*', (req, res, next) => {
-    res.redirect('https://' + req.get('host') + req.originalUrl);
-    next()
-  });
-  http.createServer(httpApp).listen(80, () => {console.log('HTTP listening port 80...')});
+  if (!IS_DEV) {
+    // redirect to https app
+    httpApp.get('*', (req, res, next) => {
+      res.redirect('https://' + req.get('host') + req.originalUrl);
+      next()
+    });
+  }
+  else {
+    httpApp.use(express.static('dist'));
+  }
+  const port = process.env.PORT || 80;
+  http.createServer(httpApp).listen(port, () => {console.log(`HTTP listening port ${port}...`)});
 }
 
 httpsServer = () => {
-  const httpsApp = express();
-  
-  // set static folder
-  httpsApp.use(express.static('static'))
-
-  // https config
-  const credentials = {
+  const HTTP_CREDETIENS = {
     cert: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/fullchain.pem'),
     key: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/privkey.pem')
   };
-
-  https.createServer(credentials, httpsApp).listen(443, () => {console.log('HTTPS listening port 443...')});
+  
+  const httpsApp = express();
+  httpsApp.use(express.static('dist'));
+  https.createServer(HTTP_CREDETIENS, httpsApp).listen(443, () => {console.log('HTTPS listening port 443...')});
 }
 
 httpServer();
-httpsServer();
+if (!IS_DEV) httpsServer();

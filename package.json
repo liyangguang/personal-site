@@ -2,17 +2,38 @@
   "name": "liyangguang.com",
   "version": "1.0.0",
   "description": "Yangguang Li's personal website",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.15.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "sudo node server.js",
-    "prod": "sudo forever start server.js",
-    "stop": "sudo forever stop server.js",
-    "renew-cert": "sudo forever stop server.js && sudo certbot renew && sudo forever start server.js"
-  },
   "author": "Yangguang Li (liyangguangcn@gmail.com)",
-  "license": "ISC"
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "serve-fe": "vue-cli-service serve",
+    "serve-be": "npm run build-fe && PORT=3000 ENV=dev nodemon server.js",
+    "build-fe": "vue-cli-service build",
+    "prod": "npm run build-fe && sudo forever start server.js",
+    "stop": "sudo forever stop server.js",
+    "renew-cert": "npm run stop && sudo certbot renew && npm run prod"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "license": "MIT"
 }

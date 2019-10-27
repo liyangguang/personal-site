@@ -1,32 +1,19 @@
 # personal-site
-A repo for liyangguang.com
+A repo for liyangguang.com. Express backend and Vue frontend.
 
-## Run dev
+## Developement
 ```bash
-npm run dev
+npm run serve-fe  # Run Vue frontend locally
+npm run serve-be  # Run express backend locally
 ```
 
-## Run prod (keep alive)
+## Production
 ```bash
-npm run prod
+npm run prod  # Serving the site using forever
+npm run stop  # Stop serving
+npm run renew-cert  # Renew https cert
 ```
 
-## Stop prod
-```bash
-npm run stop
-```
+## Auto start up
 
-## Renew https certificate
-```bash
-npm run renew-cert
-```
-
-## Setup auto start up
-```bash
-sudo crontab -e
-```
-
-Add `@reboot /home/liyangguang/liyangguang.com/run.sh`
-
-- Use sudo here, since the run.sh (i.e. the forever command) requires sudo.
-- Use full path here, since it's run with the user root.
+Add `@reboot /home/liyangguang/liyangguang.com/run.sh` to `crontab -e`
