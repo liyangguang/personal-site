@@ -6,6 +6,7 @@
   "private": true,
   "main": "server.js",
   "scripts": {
+    "start": "npm run serve-fe",
     "serve-fe": "vue-cli-service serve",
     "serve-be": "npm run build-fe && PORT=3000 ENV=dev nodemon server.js",
     "build-fe": "vue-cli-service build",

@@ -16,9 +16,9 @@ export default {
 };
 
 const CONTENT = [
-  {name: 'Email', url: 'mailto:liyangguangcn@gmail.com', icon: require('@/assets/email.svg')},
   {name: 'LinkedIn', url: 'https://www.linkedin.com/in/yangguangli/', icon: require('@/assets/linkedin.svg')},
   {name: 'GitHub', url: 'https://github.com/liyangguang', icon: require('@/assets/github.svg')},
+  {name: 'Email', url: 'mailto:liyangguangcn@gmail.com', icon: require('@/assets/email.svg')},
 ];
 </script>
 
@@ -33,11 +33,11 @@ ul.links {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-top: 3rem;
 }
 
 li.link {
   flex: 0 1 6rem;
+  margin: 0 1em;
 }
 
 li.link a {

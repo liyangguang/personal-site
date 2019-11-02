@@ -2,16 +2,17 @@
 div
   h1 Hey there!
   p I'm Yangguang Li
-  p Web developer + UX designer
-  p UX Engineer @ Google
+  p &lt;front-end /&gt; engineer 👨‍💻+ UX designer 💡
+  p Currently Senior UX Engineer @ Google
 </template>
 
 <style scoped>
 h1 {
-  margin: 1.5em;
+  font-size: 3em;
+  margin-bottom: 1em;
 }
 
 p {
-  margin: 1.5em;
+  margin: 1em 0;
 }
 </style>

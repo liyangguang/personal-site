@@ -24,9 +24,7 @@ html, body {
 
 body {
   font-family: 'Roboto Slab', serif;
-  text-align: center;
   background: #333538;
   color: #d4e5ec;
-  padding-top: 5em;
 }
 </style>
