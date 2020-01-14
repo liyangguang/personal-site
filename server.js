@@ -3,9 +3,26 @@ const fs = require('fs');
 const http = require('http');
 const https = require('https');
 const express = require('express');
-const IS_DEV = process.env.ENV === 'dev';
+const IS_DEV = process.env.ENV === 'dev';  // From npm script
 
-httpServer = () => {
+
+const _constructServer = (app) => {
+  const VUE_APP_PATH = 'dist';
+  const BLOG_PATH = '/blog';
+  const VUE_PRESS_PATH = `${BLOG_PATH}/.vuepress/dist`;
+
+  app.use(BLOG_PATH, express.static(__dirname + VUE_PRESS_PATH));
+  app.use(express.static(VUE_APP_PATH));
+  app.use((req, res) => {
+    if (req.path.startsWith(BLOG_PATH)) {
+      res.sendFile(`/${VUE_PRESS_PATH}/404.html`, {root: __dirname});
+    } else {
+      res.sendFile(`/${VUE_APP_PATH}/404.html`, {root: __dirname});
+    }
+  });
+};
+
+const httpServer = () => {
   const httpApp = express();
   if (!IS_DEV) {
     // redirect to https app
@@ -15,20 +32,20 @@ httpServer = () => {
     });
   }
   else {
-    httpApp.use(express.static('dist'));
+    _constructServer(httpApp);
   }
   const port = process.env.PORT || 80;
   http.createServer(httpApp).listen(port, () => {console.log(`HTTP listening port ${port}...`)});
 }
 
-httpsServer = () => {
+const httpsServer = () => {
   const HTTP_CREDETIENS = {
     cert: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/fullchain.pem'),
     key: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/privkey.pem')
   };
   
   const httpsApp = express();
-  httpsApp.use(express.static('dist'));
+  _constructServer(httpsApp);
   https.createServer(HTTP_CREDETIENS, httpsApp).listen(443, () => {console.log('HTTPS listening port 443...')});
 }
 
