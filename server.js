@@ -1,10 +1,18 @@
-/* simple https + http express */
+/**
+ * A simple express server.
+ * - http and https
+ * - vue app and vuepress
+ */
+
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
 const express = require('express');
-const IS_DEV = process.env.ENV === 'dev';  // From npm script
 
+const IS_PROD = process.env.ENV !== 'dev';  // From npm script
+const HTTPS_DIR = '/etc/letsencrypt/live/liyangguang.com';
+const HTTPS_CERT_PATH = `${HTTPS_DIR}/fullchain.pem`;
+const HTTPS_KEY_PATH = `${HTTPS_DIR}/privkey.pem`;
 
 const _constructServer = (app) => {
   const VUE_APP_PATH = 'dist';
@@ -22,9 +30,9 @@ const _constructServer = (app) => {
   });
 };
 
-const httpServer = () => {
+const startHttpServer = () => {
   const httpApp = express();
-  if (!IS_DEV) {
+  if (IS_PROD) {
     // redirect to https app
     httpApp.get('*', (req, res, next) => {
       res.redirect('https://' + req.get('host') + req.originalUrl);
@@ -36,18 +44,22 @@ const httpServer = () => {
   }
   const port = process.env.PORT || 80;
   http.createServer(httpApp).listen(port, () => {console.log(`HTTP listening port ${port}...`)});
-}
+};
 
-const httpsServer = () => {
+const startHttpsServer = () => {
   const HTTP_CREDETIENS = {
-    cert: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/fullchain.pem'),
-    key: fs.readFileSync('/etc/letsencrypt/live/liyangguang.com/privkey.pem')
+    cert: fs.readFileSync(HTTPS_CERT_PATH),
+    key: fs.readFileSync(HTTPS_KEY_PATH),
   };
   
   const httpsApp = express();
   _constructServer(httpsApp);
   https.createServer(HTTP_CREDETIENS, httpsApp).listen(443, () => {console.log('HTTPS listening port 443...')});
-}
+};
 
-httpServer();
-if (!IS_DEV) httpsServer();
+const start = () => {
+  startHttpServer();
+  if (IS_PROD) startHttpsServer();
+};
+
+start();
