@@ -8,10 +8,10 @@
   "scripts": {
     "start": "npm run fe:dev",
     "fe:dev": "vue-cli-service serve",
-    "fe:build": "vue-cli-service build",
     "blog:dev": "vuepress dev blog",
-    "blog:build": "vuepress build blog",
     "be:dev": "npm run fe:build && npm run blog:build && PORT=3000 ENV=dev nodemon server.js",
+    "fe:build": "vue-cli-service build",
+    "blog:build": "vuepress build blog",
     "prod": "npm run fe:build && npm run blog:build && sudo forever start server.js",
     "stop": "sudo forever stopall",
     "renew-cert": "npm run stop && sudo certbot renew && npm run prod"
@@ -25,6 +25,8 @@
     "@vue/cli-plugin-babel": "^4.1.2",
     "@vue/cli-plugin-router": "^4.1.2",
     "@vue/cli-service": "^4.1.2",
+    "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/theme-blog": "^2.0.2",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "vue-template-compiler": "^2.6.11",

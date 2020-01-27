@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+*, *::before, *::after {
+  font-family: Roboto Slab,serif !important;
+}
+
+
+// Header
+
+#header {
+  padding: .5em 2em;
+}
+
+.header-wrapper .title {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.header-wrapper .header-right-wrap .nav .nav-item a {
+  font-size: 16px;
+}
+
+.search-box input,
+.suggestions a
+  color: #333538 !important
+
+.nav-item:last-child
+  display: flex;
+  align-items: center;
+
+  &::after
+    content: '';
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: .2em;
+    background-image: url(/assets/open_in_new-24px.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+// Post
+.vuepress-blog-theme-content {
+  box-shadow: none !important;
+}
+
+.vuepress-blog-theme-content .post-title {
+  color: #fff;
+}
+
+
+// Post tag
+.post-meta {
+  display: flex;
+  align-items: center;
+}
+
+.post-meta-date {
+  align-items: center;
+  margin-right: 40px !important;
+}
+
+.post-meta-tags li.post-tag
+  background: transparent;
+  height: auto;
+  font-size: 12px;
+  margin: 0;
+  padding: 3px;
+
+  a
+    color: $textColor;
+
+  &:hover
+    background: transparent;
+
+    a
+      color: $accentColor;
+  
+  &::before,
+  &::after
+    display: none;
