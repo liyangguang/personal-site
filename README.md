@@ -39,6 +39,15 @@ npm run stop        # Stop serving
 npm run renew-cert  # Renew https cert
 ```
 
-## Auto start up
+## Cron jobs
 
-Add `@reboot /home/liyangguang/liyangguang.com/run.sh` to `crontab -e`
+Restart the site when reboot
+
+```
+@reboot /home/liyangguang/liyangguang.com/run.sh start
+```
+
+Renew https cert quarterly
+```
+28 9 10 */3 * /home/liyangguang/liyangguang.com/run.sh renew-cert
+```
