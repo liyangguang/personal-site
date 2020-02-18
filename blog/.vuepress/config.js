@@ -29,5 +29,13 @@ module.exports = {
       ],
     },
     sitemap: {hostname: 'https://liyangguang.com/'},
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-48109667-2'
+      }
+    ]
+  ]
 };
