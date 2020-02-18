@@ -6,7 +6,7 @@ main
   //- h2 Interested to learn more?
   br
   p Checkout my&nbsp;
-    router-link(to="/blog") UXE blog
+    a(href="/blog") UXE blog
     | !
   br
   my-contact.my-contact
