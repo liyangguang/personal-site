@@ -14,6 +14,7 @@
     "blog:build": "vuepress build blog",
     "prod": "npm run fe:build && npm run blog:build && sudo forever start server.js",
     "stop": "sudo forever stopall",
+    "restart": "npm run stop && npm run prod",
     "renew-cert": "npm run stop && sudo certbot renew && npm run prod"
   },
   "dependencies": {
