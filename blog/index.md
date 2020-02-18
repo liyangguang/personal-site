@@ -2,4 +2,4 @@ Hey there! I'm Yangguang, a UX Engineer. [Learn more about me](https://liyanggua
 
 This is where I write about interesting web technologies I used / learnt.
 
-Checkout [my posts](./posts), [post tags](./tags).
+Checkout [my posts](./post), [tags](./tag).
