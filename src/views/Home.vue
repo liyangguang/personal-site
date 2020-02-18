@@ -4,6 +4,11 @@ main
   //- h2 What I've been using
   //- my-timeline
   //- h2 Interested to learn more?
+  br
+  p Checkout my&nbsp;
+    router-link(to="/blog") UXE blog
+    | !
+  br
   my-contact.my-contact
 </template>
 

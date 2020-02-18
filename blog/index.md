@@ -1,7 +1,5 @@
-# Welcome to my blog site!
+Hey there! I'm Yangguang, a UX Engineer. [Learn more about me](https://liyangguang.com)
 
-I'm Yangguang Li, a user experience engineer.
+This is where I write about interesting web technologies I used / learnt.
 
-I write about web technologies, usually about what I recently learned or used.
-
-Checkout [my posts](./posts), [post tags](./tags), or [my website](https://liyangguang.com)!
+Checkout [my posts](./posts), [post tags](./tags).

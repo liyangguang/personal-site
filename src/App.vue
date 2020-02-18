@@ -27,4 +27,8 @@ body {
   background: #333538;
   color: #d4e5ec;
 }
+
+a, a:visited {
+  color: inherit;
+}
 </style>

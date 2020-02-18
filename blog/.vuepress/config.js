@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Yangguang\'s UXE blog',
-  description: 'This is de',
+  title: 'UX Engineering blog',
+  description: 'Web front end developement and UX design blog by Yangguang Li.',
   base: '/blog/',
   theme: '@vuepress/theme-blog',
   themeConfig: {
@@ -8,14 +8,14 @@ module.exports = {
       {
         id: 'posts',
         dirname: '_posts',
-        path: '/posts/',
+        path: '/post/',
       }
     ],
     nav: [
       {text: 'Home', link: '/'},
-      {text: 'All posts', link: '/posts/'},
-      {text: 'All tags', link: '/tags/'},
-      {text: 'Personal site', link: 'https://liyangguang.com'},
+      {text: 'All posts', link: '/post/'},
+      {text: 'All tags', link: '/tag/'},
+      {text: 'About me', link: 'https://liyangguang.com'},
     ],
     footer: {
       contact: [
@@ -28,13 +28,6 @@ module.exports = {
         {text: 'Source code', link: 'https://github.com/liyangguang/personal-site/tree/master/blog'},
       ],
     },
-    frontmatters: [
-      {
-        id: 'tags',
-        keys: ['tag', 'tags'],
-        path: '/tags/',
-      },
-    ],
     sitemap: {hostname: 'https://liyangguang.com/'},
   }
 };

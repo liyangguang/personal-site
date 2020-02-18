@@ -21,14 +21,15 @@
 }
 
 .search-box input,
-.suggestions a
-  color: #333538 !important
+.suggestions a {
+  color: #333538 !important;
+}
 
-.nav-item:last-child
+.nav-item:last-child {
   display: flex;
   align-items: center;
 
-  &::after
+  &::after {
     content: '';
     display: inline-block;
     width: 1.2em;
@@ -38,7 +39,8 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-
+  }
+}
 
 // Post
 .vuepress-blog-theme-content {
@@ -61,22 +63,39 @@
   margin-right: 40px !important;
 }
 
-.post-meta-tags li.post-tag
+.post-meta-tags li.post-tag {
   background: transparent;
   height: auto;
   font-size: 12px;
   margin: 0;
   padding: 3px;
 
-  a
+  a {
     color: $textColor;
+  }
 
-  &:hover
+  &:hover {
     background: transparent;
 
-    a
+    a {
       color: $accentColor;
+    }
+  }
   
   &::before,
-  &::after
+  &::after {
     display: none;
+  }
+}
+
+tr:nth-child(2n) {
+    background-color: transparent;
+}
+
+.content__default code {
+  background #282c34;
+}
+
+._white-bg {
+  background: white;
+}
