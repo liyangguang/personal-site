@@ -29,6 +29,10 @@ module.exports = {
       ],
     },
     sitemap: {hostname: 'https://liyangguang.com/'},
+    comment: {
+      service: "disqus",
+      shortname: "yangguang-uxe",
+    },
   },
   plugins: [
     [
