@@ -1,9 +1,6 @@
 <template lang="pug">
 main
   my-intro
-  //- h2 What I've been using
-  //- my-timeline
-  //- h2 Interested to learn more?
   br
   p Checkout my&nbsp;
     a(href="/blog") UXE blog
@@ -14,11 +11,10 @@ main
 
 <script>
 import MyIntro from '@/components/Intro.vue';
-import MyTimeline from '@/components/Timeline.vue';
 import MyContact from '@/components/Contact.vue';
 
 export default {
-  components: {MyIntro, MyTimeline, MyContact},
+  components: {MyIntro, MyContact},
 };
 </script>
 
