@@ -1,5 +1,5 @@
-Hey there! I'm Yangguang, a UX Engineer. [Learn more about me](https://liyangguang.com)
+<intro-wrapper/>
 
-This is where I write about interesting web technologies I used / learnt.
+<br>
 
-Checkout [my posts](./post), [tags](./tag).
+I write about web technologies I learned, code snippets/demos, and sometimes my hobbies. Checkout [all my posts](./post), or by [tags](./tag).

@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'UX Engineering blog',
-  description: 'Web front end developement and UX design blog by Yangguang Li.',
+  title: 'Yangguang\'s blog',
+  description: 'UX Engineering, frone end development, and more by Yangguang Li.',
   base: '/blog/',
   theme: '@vuepress/theme-blog',
   themeConfig: {
@@ -41,5 +41,5 @@ module.exports = {
         'ga': 'UA-48109667-2'
       }
     ]
-  ]
+  ],
 };

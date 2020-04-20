@@ -3,11 +3,7 @@
 </template>
 
 <style>
-:root {
-  --bg-color: #333538;
-  --text-color: #d4e5ec;
-  --transition: .5s ease;
-}
+@import url('../shared/_variables.css');
 
 *, *:after, *:before{
   margin: 0;

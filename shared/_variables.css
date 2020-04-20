@@ -1,0 +1,11 @@
+/**
+ * This file is used in both blog and the vue app.
+ * I share components of the vue app into the blog site - by adding a wrapper under `/blog/.vuepress/components`.
+ * So this is used to share all the css variables.
+ */
+
+:root {
+  --bg-color: #333538;
+  --text-color: #d4e5ec;
+  --transition: .5s ease;
+}
