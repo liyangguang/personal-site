@@ -10,15 +10,12 @@
     "dev:fe": "vue-cli-service serve",
     "dev:blog": "vuepress dev blog",
     "dev:be": "npm run build:all && PORT=3000 ENV=dev nodemon server.js",
-
     "build:fe": "vue-cli-service build",
     "build:blog": "vuepress build blog",
     "build:all": "npm run build:fe && npm run build:blog",
-
     "prod:start": "npm run prod:stop && sudo forever start server.js",
     "prod:stop": "sudo forever stopall",
     "prod": "npm run build:all && npm run prod:start",
-
     "renew-cert": "npm run stop && sudo certbot renew && npm run be:start"
   },
   "dependencies": {
