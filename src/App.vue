@@ -1,10 +1,14 @@
-<template>
-  <div id="app">
-    <router-view/>
-  </div>
+<template lang="pug">
+#app: router-view
 </template>
 
 <style>
+:root {
+  --bg-color: #333538;
+  --text-color: #d4e5ec;
+  --transition: .5s ease;
+}
+
 *, *:after, *:before{
   margin: 0;
   padding: 0;
@@ -24,8 +28,8 @@ html, body {
 
 body {
   font-family: 'Roboto Slab', serif;
-  background: #333538;
-  color: #d4e5ec;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 a, a:visited {

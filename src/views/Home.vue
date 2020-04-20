@@ -2,6 +2,7 @@
 main
   my-intro
   br
+  br
   p Checkout my&nbsp;
     a(href="/blog") UXE blog
     | !
@@ -32,6 +33,10 @@ main {
 h2 {
   font-size: 1.5em;
   margin: 2em 0 1em;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 .my-contact {
