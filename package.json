@@ -6,16 +6,20 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "npm run fe:dev",
-    "fe:dev": "vue-cli-service serve",
-    "blog:dev": "vuepress dev blog",
-    "be:dev": "npm run fe:build && npm run blog:build && PORT=3000 ENV=dev nodemon server.js",
-    "fe:build": "vue-cli-service build",
-    "blog:build": "vuepress build blog",
-    "prod": "npm run fe:build && npm run blog:build && sudo forever start server.js",
-    "stop": "sudo forever stopall",
-    "restart": "npm run stop && npm run prod",
-    "renew-cert": "npm run stop && sudo certbot renew && npm run prod"
+    "start": "npm run dev:fe",
+    "dev:fe": "vue-cli-service serve",
+    "dev:blog": "vuepress dev blog",
+    "dev:be": "npm run build:all && PORT=3000 ENV=dev nodemon server.js",
+
+    "build:fe": "vue-cli-service build",
+    "build:blog": "vuepress build blog",
+    "build:all": "npm run build:fe && npm run build:blog",
+
+    "prod:start": "npm run prod:stop && sudo forever start server.js",
+    "prod:stop": "sudo forever stopall",
+    "prod": "npm run build:all && npm run prod:start",
+
+    "renew-cert": "npm run stop && sudo certbot renew && npm run be:start"
   },
   "dependencies": {
     "core-js": "^3.6.4",
