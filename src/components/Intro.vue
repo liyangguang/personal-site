@@ -6,12 +6,13 @@ div
   p I'm a <span data-emoji="👨‍💻">&lt;front-end /&gt; engineer</span> + <span data-emoji="💡">UX designer</span>
   p Currently Senior UX Engineer @ Google
   br
+  br
   p When I'm not coding/designing, I ...
   p
     template(v-for="(activity, index) in activities")
       template(v-if="index !== 0") , 
       template(v-if="index === activities.length - 1") and 
-      span.hover-able(:data-emoji="activity.emoji") {{activity.text}}
+      span.hover-able(:data-emoji="activity.emoji", :data-animation="activity.animationAttr") {{activity.text}}
         span.tooltip {{activity.detail}}
 </template>
 
@@ -21,10 +22,10 @@ export default {
     return {
       noHighFive: false,
       activities: [
-        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)'},
-        {emoji: '🕹', text: 'play games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P'},
-        {emoji: '🛠', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, DIY Dollhouse, etc.), Raspberry Pi'},
-        {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones'},
+        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)', animationAttr: 'up-down'},
+        {emoji: '🕹', text: 'play games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P', animationAttr: 'shake'},
+        {emoji: '🛠', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, DIY Dollhouse, etc.), Raspberry Pi', animationAttr: 'shake'},
+        {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones', animationAttr: 'left-right'},
       ],
     };
   },
@@ -55,7 +56,10 @@ p {
 
 .hover-able {
   text-decoration: dashed;
-  border-bottom: 1px dashed;
+  background: linear-gradient(90deg, var(--highlight-color) 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-size: 8px 1px;
+  background-position: 0 100%;
   position: relative;
   cursor: help;
 
@@ -76,9 +80,23 @@ p {
     transition: opacity var(--transition);
   }
 
-  &:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
+  &:hover {
+    animation: dash-animation 15s infinite linear;
+
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &::after {
+      display: inline-block;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    &[data-animation=shake]::after {animation-name: shake-animation;}
+    &[data-animation=up-down]::after {animation-name: up-down-animation;}
+    &[data-animation=left-right]::after {animation-name: left-right-animation;}
   }
 }
 
@@ -116,6 +134,11 @@ p {
   }
 }
 
+@keyframes dash-animation {
+  0% {background-position: 0 100%;}
+  100% {background-position: 100% 100%;}
+}
+
 @keyframes wave-animation {
     0% { transform: rotate(  0.0deg) }
    10% { transform: rotate(-10.0deg) }
@@ -132,4 +155,21 @@ p {
   100% { transform: translateY(-100%) scale(1); opacity: 0; }
 }
 
+@keyframes shake-animation {
+    0% { transform: rotate(20deg); }
+   50% { transform: rotate(-20deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes up-down-animation {
+    0% { transform: translateY(0); }
+   50% { transform: translateY(-.5em); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes left-right-animation {
+    0% { transform: translateX(0); }
+   50% { transform: translateX(.5em); }
+  100% { transform: translateX(0); }
+}
 </style>
