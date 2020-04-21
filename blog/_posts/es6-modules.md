@@ -2,7 +2,7 @@
 title: JavaScript ES6 modules
 date: 2020-01-27
 tags:
-  - javascript
+  - JavaScript
   - module
 summary: A deep dive into the usage of ES6 modules - basic export/import, npm packages vs. ES6 modules, build process for browser support, and more.
 ---

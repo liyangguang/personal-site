@@ -2,7 +2,7 @@
 title: CSS Houdini Could Change the Way We Write and Manage CSS
 date: 2019-03-15
 tags:
-  - css
+  - CSS
 summary: With CSS Houdini coming to browsers, we are having more power in the CSS world. There might be some new ways we can write and manage CSS.
 ---
 
