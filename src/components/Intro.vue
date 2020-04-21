@@ -22,10 +22,10 @@ export default {
     return {
       noHighFive: false,
       activities: [
-        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)', animationAttr: 'up-down'},
+        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)', animationAttr: 'ball'},
         {emoji: '🕹', text: 'play games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P', animationAttr: 'shake'},
-        {emoji: '🛠', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, DIY Dollhouse, etc.), Raspberry Pi', animationAttr: 'shake'},
-        {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones', animationAttr: 'left-right'},
+        {emoji: '🔨', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, etc.), Raspberry Pi', animationAttr: 'hammer'},
+        {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones', animationAttr: 'car'},
       ],
     };
   },
@@ -56,9 +56,9 @@ p {
 
 .hover-able {
   text-decoration: dashed;
-  background: linear-gradient(90deg, var(--highlight-color) 50%, transparent 50%);
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
   background-repeat: repeat-x;
-  background-size: 8px 1px;
+  background-size: 6px 1px;
   background-position: 0 100%;
   position: relative;
   cursor: help;
@@ -94,9 +94,10 @@ p {
       animation-iteration-count: infinite;
     }
 
+    &[data-animation=ball]::after {animation-name: ball-animation;}
     &[data-animation=shake]::after {animation-name: shake-animation;}
-    &[data-animation=up-down]::after {animation-name: up-down-animation;}
-    &[data-animation=left-right]::after {animation-name: left-right-animation;}
+    &[data-animation=hammer]::after {animation-name: hammer-animation;}
+    &[data-animation=car]::after {animation-name: car-animation;}
   }
 }
 
@@ -161,15 +162,22 @@ p {
   100% { transform: rotate(20deg); }
 }
 
-@keyframes up-down-animation {
+@keyframes ball-animation {
     0% { transform: translateY(0); }
    50% { transform: translateY(-.5em); }
   100% { transform: translateY(0); }
 }
 
-@keyframes left-right-animation {
-    0% { transform: translateX(0); }
-   50% { transform: translateX(.5em); }
-  100% { transform: translateX(0); }
+@keyframes hammer-animation {
+    0% { transform-origin: 80% 50%; transform: rotate(-25deg); }
+  100% { transform-origin: 80% 50%; transform: rotate(0deg); }
+}
+
+@keyframes car-animation {
+    0% { transform: translateY(0); }
+   25% { transform: rotate(5deg);}
+   50% { transform: translateY(-.1em);}
+   75% { transform: rotate(-5deg);}
+  100% { transform: translateY(0); }
 }
 </style>
