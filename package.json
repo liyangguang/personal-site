@@ -16,7 +16,7 @@
     "prod:start": "npm run prod:stop && sudo forever start server.js",
     "prod:stop": "sudo forever stopall",
     "prod": "npm run build:all && npm run prod:start",
-    "renew-cert": "npm run stop && sudo certbot renew && npm run be:start"
+    "renew-cert": "npm run prod:stop && sudo certbot renew && npm run prod:start"
   },
   "dependencies": {
     "core-js": "^3.6.4",
