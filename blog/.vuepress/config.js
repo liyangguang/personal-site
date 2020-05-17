@@ -35,11 +35,20 @@ module.exports = {
     },
   },
   plugins: [
+    ['@vuepress/google-analytics', {'ga': 'UA-48109667-2'}],
+    ['vuepress-plugin-nprogress'],
+    ['vuepress-plugin-smooth-scroll'],
     [
-      '@vuepress/google-analytics',
+      'vuepress-plugin-medium-zoom',
       {
-        'ga': 'UA-48109667-2'
-      }
-    ]
+        selector: 'img',
+        delay: 1000,
+        options: {
+          margin: 24,
+          background: '#f2f2f2',
+          scrollOffset: 0,
+        },
+      },
+    ],
   ],
 };
