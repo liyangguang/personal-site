@@ -7,7 +7,7 @@ import Intro from '../../../src/components/Intro.vue';
 export default {components: {Intro}}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url('../../../shared/_variables.css');
 
 .intro {

@@ -3,7 +3,7 @@ title: JavaScript ES6 modules
 date: 2020-01-27
 tags:
   - JavaScript
-  - module
+  - JS Module
 summary: A deep dive into the usage of ES6 modules - basic export/import, npm packages vs. ES6 modules, build process for browser support, and more.
 ---
 
@@ -88,14 +88,12 @@ For older browsers doesn’t support ES6 module, you need to bundle them into on
 ```
 
 This is how the code works:
-<div class="_white-bg">
-    <img src="/blog/assets/es6-modules-code-graph.png" alt="code graph">
-</div>
+
+![Code garph](../_assets/es6-modules-code-graph.png)
 
 Here's how old browsers and modern browsers load the above code:
-<div class="_white-bg">
-    <img src="/blog/assets/es6-modules-browser-comparison.png" alt="browser comparison">
-</div>
+
+![browser comparison](../_assets/es6-modules-browser-comparison.png)
 
 - On browsers that supports ES6 module, code inside `nomodule` will be ignored. And only `type="module"` will be executed. As a result, users using modern browsers loads ES6 modules on their browsers.
 - On browser that doesn’t support ES6 module. They don’t understand `type="module"`, so they just ignore the tag. And they also don’t know about `nomodule`, so they just load and execute the bundle file like any other normal js file.

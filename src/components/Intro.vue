@@ -23,7 +23,7 @@ export default {
       noHighFive: false,
       activities: [
         {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)', animationAttr: 'ball'},
-        {emoji: '🕹', text: 'play games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P', animationAttr: 'shake'},
+        {emoji: '🕹', text: 'play video games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P', animationAttr: 'shake'},
         {emoji: '🔨', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, etc.), Raspberry Pi', animationAttr: 'hammer'},
         {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones', animationAttr: 'car'},
       ],

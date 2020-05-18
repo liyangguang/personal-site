@@ -13,8 +13,8 @@ module.exports = {
     ],
     nav: [
       {text: 'Home', link: '/'},
-      {text: 'All posts', link: '/post/'},
-      {text: 'All tags', link: '/tag/'},
+      {text: 'All', link: '/post/'},
+      {text: 'Tags', link: '/tag/'},
       {text: 'About me', link: 'https://liyangguang.com'},
     ],
     footer: {
@@ -33,11 +33,10 @@ module.exports = {
       service: "disqus",
       shortname: "yangguang-uxe",
     },
+    smoothScroll: true,
   },
   plugins: [
     ['@vuepress/google-analytics', {'ga': 'UA-48109667-2'}],
-    ['vuepress-plugin-nprogress'],
-    ['vuepress-plugin-smooth-scroll'],
     [
       'vuepress-plugin-medium-zoom',
       {

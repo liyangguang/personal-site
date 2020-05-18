@@ -3,7 +3,7 @@ title: JavaScript Module History
 date: 2020-01-26
 tags:
   - JavaScript
-  - module
+  - JS Module
 summary: Why does JavaScript need modules? What the difference between CommonJS, AMD, UMD? In this article, I walk through a brief history of JS modules, from old simple script tag and IIFE all the way to ES6 modules.
 ---
 

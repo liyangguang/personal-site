@@ -21,9 +21,12 @@
   font-size: 16px;
 }
 
-.search-box input,
-.suggestions a {
+header * {
   color: #333538 !important;
+}
+
+.suggestions * {
+  font-size: .9rem !important;
 }
 
 .nav-item:last-child {
@@ -48,11 +51,6 @@
   box-shadow: none !important;
 }
 
-.vuepress-blog-theme-content .post-title {
-  color: #fff;
-}
-
-
 // Post tag
 .post-meta {
   display: flex;
@@ -65,40 +63,22 @@
 }
 
 .post-meta-tags li.post-tag {
-  background: transparent;
   height: auto;
   font-size: 12px;
   margin: 0;
-  padding: 3px;
-
-  a {
-    color: $textColor;
-  }
-
-  &:hover {
-    background: transparent;
-
-    a {
-      color: $accentColor;
-    }
-  }
+  padding: 3px 1em 3px 6px;
   
-  &::before,
-  &::after {
+  &::before {
     display: none;
   }
 }
 
+.content__default code {
+  font-size: 1em;
+}
+
 tr:nth-child(2n) {
     background-color: transparent;
-}
-
-.content__default code {
-  background #282c34;
-}
-
-._white-bg {
-  background: white;
 }
 
 #disqus_thread {
