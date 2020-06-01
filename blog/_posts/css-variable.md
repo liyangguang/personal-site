@@ -1,22 +1,22 @@
 ---
-title: Why I prefer CSS varibles to SASS/LESS variables
+title: Why I prefer CSS variables to SASS/LESS variables
 date: 2020-05-30
 tags:
   - CSS
-summary: CSS variables (Custom Properties) are available in all popular broswers now. Being a native feature, it has many advantages over pre/post-processor variables like SASS, LESS.
+summary: CSS variables (Custom Properties) are available in all popular browsers now. Being a native feature, it has many advantages over pre/post-processor variables like SASS, LESS.
 ---
 
 ## Use CSS variables
 
-CSS variables (Custom Properties) are available in all popular broswers now. It's easy to think:
+CSS variables (Custom Properties) are available in all popular browsers now. It's easy to think:
 
 > We've been using variables in CSS with SASS/LESS/etc. for a long time. It's good that now we have it natively, but so what?
 
-Yeah yeah, for basic uses, there's almost no difference - just change the variable syntax from `$my-color: #aaa` to `--my-color: #aaa`, and change the reference to the variable from `background: $my-color` to `background: var(--my-color)`. SASS syntax is even more concise. However, native CSS variables has some power that other pre/post-processors do not have.
+Yeah yeah, for basic uses, there's almost no difference - just change the variable syntax from `$my-color: #aaa` to `--my-color: #aaa`, and change the reference to the variable from `background: $my-color` to `background: var(--my-color)`. SASS syntax is even more concise. However, native CSS variables have some power that other pre/post-processors do not have.
 
 ## Advantage 1: Inherence and overriding
 
-CSS variables follows the same inherence rules of normal CSS rules. In some cases, this can be quite useful. For example, you can use the same CSS code for the card (maybe a component), and change some styles using css variable (instead of passing in a component prop, and set a conditional class).
+CSS variables follow the same inherence rules of normal CSS rules. In some cases, this can be quite useful. For example, you can use the same CSS code for the card (maybe a component), and change some styles using CSS variables (instead of passing in a component prop, and set a conditional class).
 
 <css-variables-override/>
 
@@ -54,5 +54,5 @@ When using Vue.js, you can set multiple CSS variables automatically by applying 
 
 ![Devtools](../_assets/css-variables-devtools.png)
 
-Not a huge deal, but it's very convient to be able to modify CSS variables inside browser devtools. You can change the value of any variable, or assign variables to any element to test it out on the fly.
+Not a huge deal, but it's very convenient to be able to modify CSS variables inside browser devtools. You can change the value of any variable, or assign variables to any element to test it out on the fly.
 In comparison, SASS variables are just compiled into values, and there's no way to play with SASS variables in devtools.
