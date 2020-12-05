@@ -10,6 +10,7 @@ div(:style="myVars")
 
 <script>
 export default {
+  name: 'css-variables-edit',
   data() {
     return {
       tabs: [

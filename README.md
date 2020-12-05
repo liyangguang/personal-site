@@ -8,13 +8,13 @@ A repo for liyangguang.com.
 ```
 ├── src (Vue app code)
 ├── public (Vue app public code)
-├── dist (Vue app output)
 ├── blog
 │   ├── .vuepress
 │   │   ├── config.js
 │   │   ├── dist/**/*.html (VuePress output)
-│   ├── **/*.md (blog markdowns)
-├── server.js (Node Express code)
+│   ├── _posts (Blog content)
+├── dist (Vue app output)
+├── server (Node Express code)
 ```
 
 ## Install

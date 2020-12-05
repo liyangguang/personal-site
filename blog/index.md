@@ -1,3 +1,0 @@
-<IntroWrapper/>
-
-<StartButton/>

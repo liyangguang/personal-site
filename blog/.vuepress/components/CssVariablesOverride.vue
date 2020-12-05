@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: 'css-variables-override',
   data() {
     return {
       override: true,

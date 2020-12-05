@@ -23,7 +23,7 @@ html, body {
 }
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Open Sans', sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
 }

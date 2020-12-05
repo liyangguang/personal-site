@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *, *::before, *::after {
-  font-family: Roboto Slab,serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 
@@ -15,6 +15,7 @@
 .header-wrapper .title {
   font-size: 18px;
   text-transform: capitalize;
+  pointer-events: none;
 }
 
 .header-wrapper .header-right-wrap .nav .nav-item a {
@@ -27,23 +28,6 @@ header * {
 
 .suggestions * {
   font-size: .9rem !important;
-}
-
-.nav-item:last-child {
-  display: flex;
-  align-items: center;
-
-  &::after {
-    content: '';
-    display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
-    margin-left: .2em;
-    background-image: url(/blog/assets/open_in_new-24px.svg);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
 }
 
 // Post
@@ -83,4 +67,12 @@ tr:nth-child(2n) {
 
 #disqus_thread {
   margin-top: 10em;
+}
+
+// Footer
+
+footer .copyright-item {
+  font-weight 600;
+  font-size .9em !important
+  color #aaa !important
 }
