@@ -3,7 +3,7 @@
 </template>
 
 <style>
-@import url('../shared/_variables.css');
+@import url('./_variables.css');
 
 *, *:after, *:before{
   margin: 0;
