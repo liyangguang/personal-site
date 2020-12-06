@@ -18,13 +18,17 @@ Yeah yeah, for basic uses, there's almost no difference - just change the variab
 
 CSS variables follow the same inherence rules of normal CSS rules. In some cases, this can be quite useful. For example, you can use the same CSS code for the card (maybe a component), and change some styles using CSS variables (instead of passing in a component prop, and set a conditional class).
 
-<css-variables-override/>
+<div class="_interaction-container">
+  <css-variables-override/>
+</div>
 
 ## Advantage 2: Editing using JavaScript
 
 You can edit css variables using JavaScript --- `element.style.setProperty('--my-var', newValue);`. And all places using this variable will get updated automatically.
 
-<css-variables-edit/>
+<div class="_interaction-container">
+  <css-variables-edit/>
+</div>
 
 In this example, my CSS looks like this:
 

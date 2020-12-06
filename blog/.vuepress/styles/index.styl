@@ -22,12 +22,14 @@
   font-size: 16px;
 }
 
-header * {
-  color: #333538 !important;
-}
-
 .suggestions * {
   font-size: .9rem !important;
+}
+
+// List
+
+.ui-post-tag a {
+  margin-right 1.5em !important
 }
 
 // Post
@@ -35,38 +37,43 @@ header * {
   box-shadow: none !important;
 }
 
-// Post tag
-.post-meta {
-  display: flex;
-  align-items: center;
-}
-
-.post-meta-date {
-  align-items: center;
-  margin-right: 40px !important;
-}
-
-.post-meta-tags li.post-tag {
-  height: auto;
-  font-size: 12px;
-  margin: 0;
-  padding: 3px 1em 3px 6px;
-  
-  &::before {
-    display: none;
-  }
-}
-
 .content__default code {
   font-size: 1em;
 }
 
 tr:nth-child(2n) {
-    background-color: transparent;
+  background-color: transparent;  // Remove default table straps
+}
+
+blockquote {
+  color $accentColor
+  font-size 1.5em
+  font-style: italic
 }
 
 #disqus_thread {
   margin-top: 10em;
+}
+
+._interaction-container {
+  &::before {
+    content: 'Interactive demo. Play with it!'
+    background $accentColor
+    padding: 2px 1em
+    color $bgColor
+    font-size 0.9em
+  }
+
+  & > * {
+    border 1px solid $accentColor
+  }
+}
+
+// Pagination
+ul.pagination > li.disabled > a,
+ul.pagination > li > a,
+ul.pagination > li > span {
+  background-color: $footerBgColor
 }
 
 // Footer
@@ -74,5 +81,4 @@ tr:nth-child(2n) {
 footer .copyright-item {
   font-weight 600;
   font-size .9em !important
-  color #aaa !important
 }
