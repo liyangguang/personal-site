@@ -37,6 +37,7 @@ module.exports = {
     },
     smoothScroll: true,
   },
+  markdown: {lineNumbers: true},
   plugins: [
     ['@vuepress/google-analytics', {'ga': 'UA-48109667-2'}],
     [
