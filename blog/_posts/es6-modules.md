@@ -124,5 +124,5 @@ To improve the performance of loading, you can also preload the module just like
 
 ## See more
 
-- [My JavaScript module history article](../../25/js-module-history)
+- [My JavaScript module history article](../js-module-history)
 - [MDN JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)

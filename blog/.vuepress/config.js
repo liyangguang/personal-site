@@ -9,12 +9,13 @@ module.exports = {
         id: 'posts',
         dirname: '_posts',
         path: '/',
+        itemPermalink: '/:year/:month/:slug',
       }
     ],
     nav: [
       {text: 'All posts', link: '/'},
       {text: 'Tags', link: '/tag/'},
-      {text: 'About me', link: '/../'},
+      {text: 'About me', link: 'https://liyangguang.com'},
     ],
     footer: {
       contact: [
@@ -30,6 +31,9 @@ module.exports = {
     comment: {
       service: "disqus",
       shortname: "yangguang-uxe",
+    },
+    globalPagination: {
+      lengthPerPage: 10,
     },
     smoothScroll: true,
   },

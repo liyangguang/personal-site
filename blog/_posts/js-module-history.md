@@ -126,6 +126,6 @@ summary: Why does JavaScript need modules? What the difference between CommonJS,
 
 ## See more
 
-- [My ES6 module article](../../26/es6-modules)
+- [My ES6 module article](../es6-modules)
 - [The Evolution of JavaScript Modularity](https://github.com/myshov/history-of-javascript/tree/master/4_evolution_of_js_modularity)
 - [MDN JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
