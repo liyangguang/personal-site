@@ -9,4 +9,6 @@
   --text-color: #eaeaea;
   --highlight-color: #f2a365;
   --transition: .5s ease;
+  
+  --z-above-content: 1;
 }

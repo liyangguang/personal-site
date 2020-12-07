@@ -3,7 +3,10 @@ div
   h1 
     span.waving-hand(title="HIGH FIVE!", :class="{'-no-high-five': noHighFive}", @click="refreshHighFive")
     | Hey there! I'm Yangguang Li
-  p I'm a <span data-emoji="👨‍💻">&lt;front-end /&gt; engineer</span> + <span data-emoji="💡">UX designer</span>
+  p I'm 
+    span.no-wrap 80% <span data-emoji="👨‍💻">&lt;front-end /&gt; engineer</span>
+    | +
+    span.no-wrap 20% <span data-emoji="💡">UX designer</span>
   p Currently Senior UX Engineer @ Google
   br
   br
@@ -12,7 +15,7 @@ div
     template(v-for="(activity, index) in activities")
       template(v-if="index !== 0") , 
       template(v-if="index === activities.length - 1") and 
-      span.hover-able(:data-emoji="activity.emoji", :data-animation="activity.animationAttr") {{activity.text}}
+      span.hover-able.no-wrap(:data-emoji="activity.emoji", :data-animation="activity.animationAttr") {{activity.text}}
         span.tooltip {{activity.detail}}
 </template>
 
@@ -22,10 +25,10 @@ export default {
     return {
       noHighFive: false,
       activities: [
-        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad (too short...). And I like San Antonio Spurs (Big3 era), Iverson, The Professor (And1)', animationAttr: 'ball'},
-        {emoji: '🕹', text: 'play video games', detail: 'GTA 5, NBA 2K, Pokemon, and casual Nintendo Switch games. Recently started retro PC gaming :P', animationAttr: 'shake'},
+        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad. I like San Antonio Spurs (GDP), Iverson, The Professor (And1)', animationAttr: 'ball'},
+        {emoji: '🕹', text: 'play video games', detail: 'GTA 5, NBA 2K, Pokemon, and casual games. Recently started retro PC gaming :P', animationAttr: 'shake'},
         {emoji: '🔨', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, etc.), Raspberry Pi', animationAttr: 'hammer'},
-        {emoji: '🚗', text: 'enjoy road trips', detail: 'I had quite a few road trips across US. From day-trip to week-long ones', animationAttr: 'car'},
+        {emoji: '🚗', text: 'enjoy road trips', detail: 'From day-trip to week-long ones. See a map below~', animationAttr: 'car'},
       ],
     };
   },
@@ -54,6 +57,10 @@ p {
   padding: 0 4px;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .hover-able {
   text-decoration: dashed;
   background: linear-gradient(90deg, currentColor 50%, transparent 50%);
@@ -78,6 +85,8 @@ p {
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition);
+    z-index: var(--z-above-content);
+    white-space: normal;
   }
 
   &:hover {

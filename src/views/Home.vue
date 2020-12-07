@@ -1,9 +1,11 @@
 <template lang="pug">
 main
   my-intro.my-intro
-  p.blog-line Checkout&nbsp;
-    a(href="/blog") my blog
-    |  on UX engineering and more!
+  .blog-line
+    p I'm still thinking about what to put on this site 😜
+    p Before then, checkout&nbsp;
+      a(href="/blog") my blog
+      |  on UX engineering and more!
   .iframe-container: iframe(src="https://www.google.com/maps/d/embed?mid=19-2d1Lr-mtRtx325HmJgwxrFIrC69l6K")
   my-contact.my-contact
 </template>
