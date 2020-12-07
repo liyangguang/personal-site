@@ -18,6 +18,8 @@ If you ask a random web developer to list framework/library, I'm sure most peopl
 - Angular: 63K
 - Svelte: 40k
 
+![state of js 2019](../_assets/vue-satisfaction.png)
+
 Vue actually has the most stars. And in [state of js 2019](https://2019.stateofjs.com/front-end-frameworks/), Vue is the 3rd well-knwon framework, and the **highest satisfaction** among developers used it. I definitely "+1" this! I've built many websites/webapps using React, Angular (1 and 2+), Vue, LitElement. Not only personal projects, but real projects with thousands of users. (I just realized I happened to have thousands+ users apps on each of the 4 frameworks, so I guess I'm somewhat qualified to comment on this topic :P)
 
 > Vue is the framework with the least distraction, and best developer experience. So you can just focus on your product
