@@ -2,7 +2,7 @@
 title: REST vs gRPC vs GraphQL
 date: 2020-05-17
 tags:
-  - API
+  - Server-side
 summary: A quick summary of the 3 different API solutions - REST, gRPC, and GraphQL.
 ---
 
