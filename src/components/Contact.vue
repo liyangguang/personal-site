@@ -18,6 +18,7 @@ export default {
 const CONTENT = [
   {name: 'LinkedIn', url: 'https://www.linkedin.com/in/yangguangli/', icon: require('@/assets/linkedin.svg')},
   {name: 'GitHub', url: 'https://github.com/liyangguang', icon: require('@/assets/github.svg')},
+  {name: 'Twitter', url: 'https://twitter.com/LYangguang', icon: require('@/assets/twitter.svg')},
   {name: 'Email', url: 'mailto:liyangguangcn@gmail.com', icon: require('@/assets/email.svg')},
 ];
 </script>
@@ -36,7 +37,7 @@ ul.links {
 }
 
 li.link {
-  flex: 0 1 6rem;
+  flex: 0 1 3rem;
   margin: 0 1em;
 }
 
@@ -46,7 +47,7 @@ li.link a {
 }
 
 li.link img {
-  width: 2.5rem;
+  width: 2.2rem;
   opacity: 1;
   transition: opacity .5s ease-in-out;
 }

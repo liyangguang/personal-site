@@ -21,6 +21,7 @@ module.exports = {
       contact: [
         {type: 'linkedin', link: 'https://www.linkedin.com/in/yangguangli/'},
         {type: 'github', link: 'https://github.com/liyangguang'},
+        {type: 'twitter', link: 'https://twitter.com/LYangguang'},
         {type: 'mail', link: 'mailto:liyangguangcn@gmail.com'},
       ],
       copyright: [
