@@ -3,13 +3,13 @@ div
   h1 
     span.waving-hand(title="HIGH FIVE!", :class="{'-no-high-five': noHighFive}", @click="refreshHighFive")
     | Hey there! I'm Yangguang Li
-  p I'm 
-    span.no-wrap 80% <span data-emoji="👨‍💻">&lt;front-end /&gt; engineer</span>
-    | +
-    span.no-wrap 20% <span data-emoji="💡">UX designer</span>
+  p
+    span.no-wrap 80% front-end engineer
+    | &nbsp;+&nbsp;
+    span.no-wrap 20% UX designer
   p Currently Senior UX Engineer @ Google
-  br
-  br
+  .blog-line
+    a(href="/blog") Checkout my blog
   p When I'm not coding/designing, I ...
   p
     template(v-for="(activity, index) in activities")
@@ -62,13 +62,13 @@ p {
 }
 
 .hover-able {
-  text-decoration: dashed;
-  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  background: linear-gradient(90deg, #fff6 50%, transparent 50%);
   background-repeat: repeat-x;
   background-size: 6px 1px;
   background-position: 0 100%;
   position: relative;
   cursor: help;
+  transition: background-size var(--transition);
 
   .tooltip {
     position: absolute;
@@ -91,6 +91,7 @@ p {
 
   &:hover {
     animation: dash-animation 15s infinite linear;
+    background-size: 6px 2px;
 
     .tooltip {
       opacity: 1;
@@ -141,6 +142,38 @@ p {
 
   &.-no-high-five::after {
     animation: none;
+  }
+}
+
+.blog-line {
+  margin: 1em 0 5em;
+
+  a {
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition);
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--highlight-color);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      transition: transform var(--transition);
+      transform-origin: 30% 120%;
+      transform: scale(.95, .2);
+    }
+
+    &:hover {
+      color: var(--bg-color);
+
+      &::before {
+        transform: scale(1.1, 1);
+      }
+    }
   }
 }
 
