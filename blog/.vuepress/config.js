@@ -34,7 +34,7 @@ module.exports = {
       shortname: "yangguang-uxe",
     },
     globalPagination: {
-      lengthPerPage: 10,
+      lengthPerPage: 50,
     },
     smoothScroll: true,
   },

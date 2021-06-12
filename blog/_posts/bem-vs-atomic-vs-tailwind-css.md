@@ -42,10 +42,12 @@ BEM has been around for a while, and widely adopted. It's pretty straightforward
 ```
 
 Yea:
+
 1. Easy to get started
 1. It works, especially for complex applications with many engineers
 
 Nay:
+
 1. Both HTML and CSS are very wordy.
 1. I have to come up with many names
 1. I need to be careful that block names has no conflicts (not an issue when used in component based frameworks)
@@ -76,17 +78,18 @@ This is a variation of BEM, and I like it a lot. It's much cleaner than BEM (bot
 ```
 
 Yea:
+
 1. Easy to get started, and works
 1. Cleaner HTML and CSS
 
 Nay:
+
 1. It uses nesting, which is not natively supported yet [spec draft](https://drafts.csswg.org/css-nesting/)
 1. Some people find class names starting with `-` and `_` werid
 
-## Utilities
+## Utilities (Tailwind)
 
 I'm not sure the name "utilities" is accurate, some also call it "atomic", but I want to distinguish from the next one.
-
 
 ```html
 <div class="w-32 bg-gray-100 rounded-xl p-8"><div>
@@ -103,18 +106,21 @@ It's easy to get. Basically you can know all the CSS by reading the HTML.
 
 If you think about it, you'll realize the CSS file can be very complex - you might need to have all of `w-32, w-16, w-18, w-8` etc., and adding them one-by-one is tedious. That's why it's commonly used with a tool like [Tailwind](https://tailwindcss.com/). Tailwind can help you generate those rules and optimize them for you.
 
-
 Yea:
+
 1. Easy to understand css from HTML
 1. No css rule specificity wars
 1. Optimized for size (with some tools)
 
 Nay:
+
 1. HTML becomes messy. Lost semantic meanings
 1. One more naming convension to remember
 1. Not practical without supporting tools
 
 Some argues this is getting back to inline styles - [One of the first issues opened on tailwind](https://github.com/tailwindlabs/discuss/issues/3) 😂 . (I agree it's much better than inline styles)
+
+> Checkout how a CSS prank turns out very similar as what Tailwind is [Funny CSS to Tailwind](../../../2021/06/funny-css-to-tailwind)
 
 ## Atomic
 
@@ -151,10 +157,12 @@ This is very similar as the one above, but kinda reversed.
 ```
 
 Yea:
+
 1. HTML is easy to read
 1. No css rule specificity wars
 
 Nay:
+
 1. Harder to reason about each element by reading the CSS
 
-## Check out [how I structure my CSS](../../2021/06/how-i-write-css)
+## Check out [how I structure my CSS](../../../2021/06/how-i-write-css)
