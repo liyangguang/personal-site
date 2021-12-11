@@ -19,21 +19,21 @@ A repo for liyangguang.com.
 
 ## Install
 ```bash
-npm i  # Install dependencies of this project
-npm i -g @vue/cli forever nodemon  # Intall tools used by this project
+nvm use 14  # node-sass is 4.14+, which only support node 14.
+npm ci  # Install dependencies of this project
+npm i -g @vue/cli forever  # Intall tools used by this project
 ```
 
 ## Developement
 ```bash
-npm run fe:dev    # Run vue app with auto refresh
-npm run blog:dev  # Run blog with auto refresh
-npm run be:dev    # Run express server with auto refresh
+npm run dev:fe    # Run vue app with auto refresh
+npm run dev:blog  # Run blog with auto refresh
+npm run dev:be    # Run express server with auto refresh
 ```
 
 ## Production
 ```bash
-npm run fe:build    # Compile vue app code
-npm run blog:build  # Compile vuePress blog
+npm run build:all / build:fe / build: blog    # Compile all/FE/blog
 npm run prod        # Serving the site using forever
 npm run stop        # Stop serving
 npm run renew-cert  # Renew https cert
