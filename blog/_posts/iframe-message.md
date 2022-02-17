@@ -8,11 +8,9 @@ summary: How to communicate between iframe and parent correctly
 
 ## TLDR
 
-> Send from iframe to parent: `window.top.postMessage(payload, originOfParent);`
->
-> Send from parent to iframe: `document.querySelector('iframe').contentWindow.postMessage(payload, originOfIframe);`
->
-> Receive message by `window.addEventListener('message', (event) => handleMessage(event))`
+> - Send from iframe to parent: `window.top.postMessage(payload, originOfParent);`
+> - Send from parent to iframe: `document.querySelector('iframe').contentWindow.postMessage(payload, originOfIframe);`
+> - Receive message by `window.addEventListener('message', (event) => handleMessage(event))`
 
 [demo link](https://iframe-message-demo-parent.netlify.app/), [code](https://github.com/liyangguang/iframe-message-demo)
 
