@@ -7,7 +7,10 @@ div
     span.no-wrap 80% front-end engineer
     | &nbsp;+&nbsp;
     span.no-wrap 20% UX designer
-  p Currently Senior UX Engineer @ Google
+    |  located in the San Francisco Bay Area.
+  br
+  p Currently incubating ML focused startup ideas @ Sutter Hill Venture.
+  p Ex - tech lead and manager @ Google.
   .blog-line
     a(href="/blog") Checkout my blog
   p When I'm not coding/designing, I ...
@@ -25,10 +28,10 @@ export default {
     return {
       noHighFive: false,
       activities: [
-        {emoji: '🏀', text: 'play basketball', detail: 'I play point gurad. I like San Antonio Spurs (GDP), Iverson, The Professor (And1)', animationAttr: 'ball'},
-        {emoji: '🕹', text: 'play video games', detail: 'GTA 5, NBA 2K, Pokemon, and casual games. Recently started retro PC gaming :P', animationAttr: 'shake'},
-        {emoji: '🔨', text: 'build stuff', detail: 'Many LEGOs, DIY toys (Labo, etc.), Raspberry Pi', animationAttr: 'hammer'},
-        {emoji: '🚗', text: 'enjoy road trips', detail: 'From day-trip to week-long ones. See a map below~', animationAttr: 'car'},
+        {emoji: '🏀', text: 'play basketball', detail: 'Point gurad. Fan of San Antonio Spurs (GDP era) and Iverson', animationAttr: 'ball'},
+        {emoji: '🕹', text: 'play video games', detail: 'Strategy games, NBA 2K, Tetris, old games.', animationAttr: 'shake'},
+        {emoji: '🔨', text: 'build stuff', detail: 'DIY home improvement, fun gadgets', animationAttr: 'hammer'},
+        {emoji: '🚗', text: 'enjoy road trips', detail: 'Across US east-west, along the coast. Many national parks.', animationAttr: 'car'},
       ],
     };
   },
